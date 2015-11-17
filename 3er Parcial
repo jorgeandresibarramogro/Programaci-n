@@ -1,0 +1,110 @@
+// Autor: Jorge Andrés Ibarra Mogro
+// Fecha: 17 de noviembre de 2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include "math.h"
+#define MAX 1000
+
+using namespace std;
+
+void cargar (double a[], int tamano);
+void mostrar (double a[], int tamano);
+int cercano (double a[], int n);
+int fibonacci (int n)
+void menu();
+
+void main ()
+{
+	int option, n;
+	double v[MAX];
+	do{
+		cout<<"\t\t MENU \n\n";
+		cout<<"1. Encontrar el mayor cercano\n\n";
+		cout<<"2. Problemas matematicos \n\n";
+		cout<<"3. Fibonacci\n\n";
+		cout<<"O. Salir del programa\n\n";
+		cout<<"Opcion: ";
+		cin>>option;
+		switch(option){
+		case 1:
+			cout<<"Introduzca el numero de elementos a comparar: ";
+			cin>>n; 
+			cargar (v, n);
+			cercano (v, n);
+			break;
+		case 2:
+			menu();
+			break;
+		case 3:
+			cout<<"Ingrese hasta que numero quiere que aparezca su FIBONACCI: ";
+			cin>>n;
+			fibonacci(n);
+			break;
+		case 0:
+			cout<<"Saliendo del programa";
+			break;
+		default: 
+			break;
+		}
+		getch();
+		system("cls");
+	}while(option!=0);
+	getch();
+}
+
+void cargar (double a[], int tamano){
+	for(int i=0; i<tamano; i++){
+		cout<<"a["<<i<<"] ";
+		cin>>a[i];
+	}
+}
+void mostrar (double a[], int tamano){
+	for(int i=0; i<tamano; i++)
+		cout<<"a["<<i<<"] "<<a[i]<<endl;
+}
+int cercano(double a[], int n){
+	int cercano;
+	cercano=a[0];
+	for(int i=0; i<n;i++)
+		if((a[i]<cercano) && (a[i]>n))
+			cercano=a[i];
+}
+int fibonacci(int n){
+	double a[MAX], c=0;
+	a[0]=0;
+	a[1]=1;
+	for(int i=2; i<MAX;i++)
+		if(a[i]<n)
+			c++;
+	cout<<"Su serie hasta "<<n<<" es: \n";
+	mostrar (a,c);
+}
+void menu(){
+	int opcion;
+	do{
+		cout<<"\t\t MENU \n\n";
+		cout<<"1. Encontrar Raix cuadrada de x*x + y*y \n\n";
+		cout<<"2. Encontrar module entre x % y\n\n";
+		cout<<"3. Hallar seno de angulo en radianes\n\n";
+		cout<<"O. Volver del programa\n\n";
+		cout<<"Opcion: ";
+		cin>>opcion;
+		switch(opcion){
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 0:
+				break;
+			default:
+				break;
+					}
+					getch();
+					system("cls");
+				}while(opcion!=0);
+}
