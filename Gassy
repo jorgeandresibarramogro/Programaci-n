@@ -1,0 +1,140 @@
+// Gasy.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#define MAX 100
+
+using namespace std;
+
+void zona();
+void anillo(int a);
+
+void main()
+{
+	int option;
+	cout << "\t B I E N V E N I D O S   A   G A S S Y \n";
+	cout << "_____________________________________________________________\n";
+	cout << "\t\t Acerca de nosotros \n";
+	cout << "	Somos una empresa que brinda el servicio que soluciona a una de sus\nprincipales necesidades: LA BUSQUEDA DE GAS NATURAL O GASOLINA." << endl;
+	cout << "	Disfrute de Gasy." << endl;
+	_getch();
+	system("cls");
+	zona();
+}
+
+void zona() {
+	int option;
+	do {
+		cout << "Ingrese en que zona se encuentra: " << endl;
+		cout << "Opcion 1. Norte" << endl;
+		cout << "Opcion 2. Sur" << endl;
+		cout << "Opcion 3. Este" << endl;
+		cout << "Opcion 4. Oeste" << endl;
+		cout << "Opcion 0. Salir del programa" << endl;
+		cout << "Opcion: ";
+		cin >> option;
+		if(option == 1 || option == 2 || option == 3 || option == 4)
+			anillo(option);
+		else
+			if (option == 0)
+				cout << "Saliendo del programa" << endl;
+			else
+				cout << "Opcion invalida" << endl;
+		}
+		getch();
+		system("cls");
+	}while ((option!=0)&&(isdigit(option=0)));
+	getch();
+}
+void anillo(int a) {
+	int option;
+	do {
+		cout << "Ingrese aproximadamente cerca de que anillo se encuentra: " << endl;
+		cout << "Opcion 1. 	2do Anillo" << endl;
+		cout << "Opcion 2.	Entre el 2do y el 3er" << endl;
+		cout << "Opcion 3.	3er Anillo" << endl;
+		cout << "Opcion 4. 	4to Anillo" << endl;
+		cout << "Opcion 5.  Volver" << endl;
+		cout << "Opcion 0. Salir del programa" << endl;
+		cout << "Opcion: ";
+		cin >> option;
+		switch(opcion){
+		case 1:
+				switch(a){
+					case 1:
+							break;
+					case 2:
+							break;
+					case 3:
+							break;
+					case 4:
+							break;
+				}
+				break;
+		case 2:
+				switch (a){
+					case 1:
+							
+							break;
+					case 2:
+							
+							break;
+					case 3:
+							
+							break;
+					case 4:
+							
+							break;
+				}
+		 		break;
+		case 3:
+				switch (a){
+					case 1:
+							
+							break;
+					case 2:
+							
+							break;
+					case 3:
+							
+							break;
+					case 4:
+							
+							break;
+				}
+				break;
+		case 4:
+				switch (a){
+					case 1:
+							
+							break;
+					case 2:
+							
+							break;
+					case 3:
+							
+							break;
+					case 4:
+							
+							break;
+				}
+				break;
+ 		case 5: 
+		 		cout << "Volver"; 
+		 		zona(); 
+		 		break; 
+		case 0:
+				cout << "Saliendo del programa";
+				break;
+ 		default: 	
+		 		cout << "Opcion invalida";
+				break; 
+		}
+		getch();
+		system("cls");
+	} while ((option!=0)&&(isdigit(option=0)));
+	getch();
+}
